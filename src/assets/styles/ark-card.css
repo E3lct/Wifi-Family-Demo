@@ -1,0 +1,160 @@
+.ark-suggestion-card-light {
+  --status-color-normal: #10b981;
+  --status-color-warning: #f59e0b;
+  --status-color-danger: #ef4444;
+  --current-status-color: var(--status-color-normal);
+
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  font-family: 'Helvetica Neue', 'Arial', 'Noto Sans SC', sans-serif;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.ark-suggestion-card-light.status-normal {
+  --current-status-color: var(--status-color-normal);
+}
+.ark-suggestion-card-light.status-warning {
+  --current-status-color: var(--status-color-warning);
+  background-color: #fffbeb;
+}
+.ark-suggestion-card-light.status-danger {
+  --current-status-color: var(--status-color-danger);
+  background-color: #fef0f0;
+  animation: ark-pulse-danger 1.5s infinite;
+}
+
+@keyframes ark-pulse-danger {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+  }
+}
+
+.ark-suggestion-card-light .ark-card-main-content {
+  flex-grow: 1;
+  text-align: left;
+  z-index: 2;
+}
+
+.ark-suggestion-card-light .ark-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.ark-suggestion-card-light .ark-header-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--current-status-color);
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.ark-suggestion-card-light .ark-header-line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #e5e7eb;
+  margin-left: 16px;
+}
+
+.ark-suggestion-card-light .ark-card-content {
+  margin-bottom: 16px;
+}
+
+.ark-suggestion-card-light .ark-suggestion-text {
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ark-suggestion-card-light .ark-card-footer {
+  text-align: center;
+}
+
+.ark-suggestion-card-light .ark-footer-line {
+  height: 1px;
+  background-color: #e5e7eb;
+  width: 80%;
+  margin: 0 auto 8px;
+}
+
+.ark-suggestion-card-light .ark-footer-text {
+  font-size: 12px;
+  color: #9ca3af;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.ark-deco-left,
+.ark-deco-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  z-index: 1;
+}
+
+.ark-deco-left {
+  left: 0;
+}
+
+.ark-deco-right {
+  right: 0;
+}
+
+.ark-deco-block-main,
+.ark-deco-block-sub {
+  position: absolute;
+  background-color: var(--current-status-color);
+  transition: background-color 0.3s ease;
+}
+
+.ark-deco-block-main {
+  width: 12px;
+  height: 50%;
+  top: 25%;
+}
+
+.ark-deco-block-sub {
+  width: 6px;
+  height: 30%;
+  top: 35%;
+}
+
+.ark-deco-left .ark-deco-block-main {
+  left: 15px;
+  transform: skewX(-20deg);
+}
+
+.ark-deco-left .ark-deco-block-sub {
+  left: 35px;
+  transform: skewX(-20deg);
+  opacity: 0.5;
+}
+
+.ark-deco-right .ark-deco-block-main {
+  right: 15px;
+  transform: skewX(20deg);
+}
+
+.ark-deco-right .ark-deco-block-sub {
+  right: 35px;
+  transform: skewX(20deg);
+  opacity: 0.5;
+}
+
+.ark-mode-control-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}

@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+.ark-suggestion-card-dark {
+  background-color: #1a1a1a;
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 15px;
+  margin-top: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #e0e0e0;
+  box-shadow: 0 0 15px rgba(0, 225, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.ark-suggestion-card-dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00e1ff, transparent);
+  animation: ark-scan-dark 4s linear infinite;
+}
+
+.ark-card-header-dark {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.ark-header-icon-dark {
+  width: 12px;
+  height: 12px;
+  background-color: #00e1ff;
+  margin-right: 10px;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.ark-header-title-dark {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #00e1ff;
+  margin: 0;
+}
+
+.ark-header-decoration-dark {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #444;
+  margin-left: 15px;
+}
+
+.ark-card-content-dark {
+  padding-left: 22px;
+}
+
+.ark-suggestion-text-dark {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  color: #c7c7c7;
+}
+
+.ark-card-footer-dark {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 10px;
+  color: #666;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.ark-footer-line-dark {
+  width: 100%;
+  height: 1px;
+  background: #444;
+  margin-bottom: 5px;
+}
+
+.ark-footer-text-dark {
+  letter-spacing: 1px;
+}
+
+@keyframes ark-scan-dark {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(100px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+}
